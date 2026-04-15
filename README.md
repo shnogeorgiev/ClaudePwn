@@ -66,7 +66,7 @@ ClaudePwn enables AI-assisted pentesting in a **controlled lab environment** wit
 
 	`irm https://claude.ai/install.ps1 | iex`
 
-	Note: Set `\.local\bin` in User PATH variable
+	Note: Set `\.local\bin` in User PATH variable (don't forget to reopen any cli windows when changing environment variables too)
 
 5. Start ClaudePwn:
 
