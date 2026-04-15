@@ -62,18 +62,24 @@ ClaudePwn enables AI-assisted pentesting in a **controlled lab environment** wit
 
     `pip install -r requirements.txt`
 
-4. Start ClaudePwn:
+4. Download Claude Code
+
+	`irm https://claude.ai/install.ps1 | iex`
+
+	Note: Set `\.local\bin` in User PATH variable
+
+5. Start ClaudePwn:
 
     `python claudepwn.py`
 
-5. Build the Kali image and create a session:
+6. Build the Kali image and create a session:
 
 	```
     ClaudePwn> sessions_refresh
     ClaudePwn> sessions_create test
 	```
 	
-6. Launch Claude Code:
+7. Launch Claude Code:
 
     `ClaudePwn> launch_claude`
 
