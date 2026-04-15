@@ -1,0 +1,37 @@
+# Ignore Claude runtime state
+.claude/
+.claude/*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# Secrets (just in case)
+*.ovpn
+*.pem
+*.key
+*.crt
+*.token
+*.secret
+
+# Visual Studio Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sessions
+sessions/
+
+# ClaudePwn History
+.claudepwn_history

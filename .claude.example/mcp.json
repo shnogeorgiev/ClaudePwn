@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "claude_pwn": {
+            "url": "http://localhost:8000/mcp",
+            "type": "http"
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "tools": {
+        "run_command": {
+            "description": "Execute a shell command inside the Kali container (sandboxed under /workspace).",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "command": {
+                        "type": "string",
+                        "description": "Raw shell command to execute inside Kali"
+                    },
+                    "cwd": {
+                        "type": "string",
+                        "description": "Relative path under /workspace to use as working directory",
+                        "nullable": true
+                    },
+                    "timeout": {
+                        "type": "integer",
+                        "description": "Timeout in seconds",
+                        "default": 1200
+                    }
+                },
+                "required": [
+                    "command"
+                ]
+            }
+        },
+        "list_dir": {
+            "description": "List directory contents under /workspace.",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "Directory path under /workspace",
+                        "default": "."
+                    }
+                }
+            }
+        },
+        "read_file": {
+            "description": "Read a file inside /workspace (truncated).",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "Relative path under /workspace to read"
+                    },
+                    "max_bytes": {
+                        "type": "integer",
+                        "description": "Maximum bytes to read",
+                        "default": 65536
+                    }
+                },
+                "required": [
+                    "path"
+                ]
+            }
+        },
+        "write_file": {
+            "description": "Write or append text to a file under /workspace.",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "File path under /workspace to write"
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Content to write"
+                    },
+                    "append": {
+                        "type": "boolean",
+                        "description": "Append instead of overwriting",
+                        "default": false
+                    }
+                },
+                "required": [
+                    "path",
+                    "content"
+                ]
+            }
+        },
+        "tail_log": {
+            "description": "Tail the last N lines of a file under /workspace.",
+            "input_schema": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "File path under /workspace"
+                    },
+                    "max_lines": {
+                        "type": "integer",
+                        "description": "Number of lines from the end",
+                        "default": 200
+                    }
+                },
+                "required": [
+                    "path"
+                ]
+            }
+        }
+    }
+}

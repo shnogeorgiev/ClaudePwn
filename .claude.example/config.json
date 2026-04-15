@@ -1,0 +1,9 @@
+{
+  "project_name": "ClaudePwn",
+  "description": "Autonomous pentesting environment using Kali + MCP + Claude Code.",
+  "memory_files": [
+    "security-agent.md",
+    "pentest-workflow.md",
+    "tools-reference.md"
+  ]
+}
